@@ -6,6 +6,8 @@
     public enum DistanceUnits
     {
         NoUnit,
+        Centimetres,
+        Inch,
         Feet,
         Metres,
         Kilometres,
