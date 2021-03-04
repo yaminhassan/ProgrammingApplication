@@ -1,0 +1,36 @@
+﻿@model ConsoleAppProject.App01.DistanceConverter 
+@using ConsoleAppProject.App01
+@{
+    ViewData["Title"] = "DistanceConverter";
+}
+<h1>DistanceConverter</h1>
+<div class="row">
+    <div class="col-lg-6">
+
+        <form action="" method="post">
+
+            <fieldset>
+                <legend>Distance Converter:</legend>
+                <select asp-for="FirstChoice" class="custom-select" asp-items="Html.GetEnumSelectList<DistanceUnits>()">
+                    <option value="">Please select from menu</option>
+                     
+                </select><br><br>
+                <select class="custom-select" asp-for="SecondChoice"asp-items="Html.GetEnumSelectList<DistanceUnits>()">
+                    <option value="">Please select from menu</option>
+                   
+                </select>
+                <label for="valueInput">Value To Convert:</label><br>
+                <input type="number" asp-for="Amount" value=""><br>
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+    </div>
+    <div class="col-lg-6  ">
+        <h2> Result </h2>
+        <p style="border-color:deeppink">@Model.GetResult()</p>
+    </div>
+
+</div>
+
+
+

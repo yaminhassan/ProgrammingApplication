@@ -10864,9 +10864,8 @@ jQuery.noConflict = function( deep ) {
 if ( typeof noGlobal === "undefined" ) {
 	window.jQuery = window.$ = jQuery;
 }
-
-
-
+	
 
 return jQuery;
-} );
+});
+
