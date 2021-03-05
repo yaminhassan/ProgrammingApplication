@@ -6,6 +6,11 @@ namespace ConsoleAppProject
 {
    public static  class ConsolHelper
     {
+        /// <summary>
+        /// The GetInput method take a perametre string and take in put and through exception if it is not a double number
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
         public static double GetInput(string message)
         {
             try
@@ -22,6 +27,10 @@ namespace ConsoleAppProject
              }
         
         }
+        /// <summary>
+        /// the Getinput method catch the exception if it can't handle
+        /// </summary>
+        /// <returns></returns>
         public static double GetInput()
         {
             try
@@ -38,6 +47,13 @@ namespace ConsoleAppProject
             }
 
         }
+        /// <summary>
+        /// The GetInput take three perametres
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="min"></param>
+        /// <param name="max"></param>
+        /// <returns></returns>
         public static double GetInput(string message, double min, double max)
         {
 
@@ -58,6 +74,11 @@ namespace ConsoleAppProject
             DisplayChoices(list);
             return (int)GetInput("Plese enter your choice number", 1, list.Length);
         }
+        /// <summary>
+        /// The Bmi result display the result according to the result
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
 
         public static double BmiResult(double number)
         {
@@ -92,7 +113,10 @@ namespace ConsoleAppProject
 
 
         }
-
+        /// <summary>
+        /// The list list item details
+        /// </summary>
+        /// <param name="list"></param>
         
         public static void DisplayChoices(string[] list)
         {
