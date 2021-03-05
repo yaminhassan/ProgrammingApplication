@@ -31,8 +31,6 @@ namespace ConsoleAppProject.App01
         public double Amount { get; set; }
         // the list of double units with the key element
         public Dictionary<DistanceUnits, double> dictionary = new Dictionary<DistanceUnits, double>();
-
-
         /// <summary>
         /// The values of the units added and  inatialized with the key 
         /// </summary>
