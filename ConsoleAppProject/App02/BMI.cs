@@ -27,14 +27,20 @@ namespace ConsoleAppProject.App02
         public double HeightCentemetre { get;  set; }
         public double WeightGrams { get;  set; }
 
-        // The Choice method let the console user choose from matric and imperial units.
+        /// <summary>
+        /// The Choice method let the console user choose from matric and imperial units.
+        /// </summary>
+
         public void Choice()
         {            
             int unitChoice = ConsolHelper.SelectChoice("\t Body Mass Index\n\t\t By Yamin Hassan" +
                                                         "\n\tPlease use matric units to calculate your BMI", choices);
             ChooseUnits(Convert.ToInt32(unitChoice));
         }
-        // The switch statement determin which method to use by user to calculate BMI
+        /// <summary>
+        ///  The switch statement determin which method to use by user to calculate BMI
+        /// </summary>
+
         public void ChooseUnits(int choose)
         {
             switch (choose)
@@ -77,7 +83,8 @@ namespace ConsoleAppProject.App02
 
                 Console.WriteLine($"\tThanks for your weight. You weight: {WeightKg}KG and {WeightGrams}");
 
-                double Result = Math.Round((WeightKg + (WeightGrams / 1000)) / Math.Pow((HeightMetres + (HeightCentemetre / 100)), 2), 1);
+                double Result = Math.Round((WeightKg + (WeightGrams / 1000)) / Math.Pow((HeightMetres + 
+                                           (HeightCentemetre / 100)), 2), 1);
                 Console.WriteLine(Result);
                 ConsolHelper.BmiResult(Result);
 
@@ -96,7 +103,9 @@ namespace ConsoleAppProject.App02
                 }                
             }
         }
-        // The PrintMatricResults calculate the Imperial units and display the result.
+        /// <summary>
+        /// The PrintMatricResults calculate the Imperial units and display the result.
+        /// </summary>
         public void PrintImperialConversion()
         {
             bool finish = false;
@@ -138,10 +147,16 @@ namespace ConsoleAppProject.App02
                 }
             }
         }
+        /// <summary>
+        /// The GetResultMatric is created to use on the web application
+        /// </summary>        
         public double GetResultMatric()
         {
             return Math.Round((WeightKg + (WeightGrams / 1000)) / Math.Pow((HeightMetres + (HeightCentemetre / 100)), 2), 1);
         }
+        /// <summary>
+        /// The GetResultImperial is created to use on the web application
+        /// </summary>
         public double GetResultImperial()
         {            
           return Math.Round((((WeightLbs +( WeightStone * 14)) / Math.Pow((HeightInches + (HeightFeet * 12)), 2)) * 703), 1);

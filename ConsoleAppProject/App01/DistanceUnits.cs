@@ -4,8 +4,7 @@
     /// List of units used to measure distance
     /// </summary>
     public enum DistanceUnits
-    {
-        
+    {        
         Centimetres,
         Inch,
         Feet,

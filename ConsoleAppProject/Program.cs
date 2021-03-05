@@ -14,6 +14,8 @@ namespace ConsoleAppProject
     /// </summary>
     public static class Program
     {
+        public static event EventHandler Event;
+
         public static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
