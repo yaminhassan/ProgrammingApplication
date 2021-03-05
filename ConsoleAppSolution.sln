@@ -12,9 +12,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication", "WebApplication\WebApplication.csproj", "{ABD11214-D046-4639-B1FC-7B87D500D067}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Applicatio02testing", "Applicatio02testing\Applicatio02testing.csproj", "{C6145896-669D-41E0-9B11-1265A7829F4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Applicatio02testing", "Applicatio02testing\Applicatio02testing.csproj", "{C6145896-669D-41E0-9B11-1265A7829F4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App01UnitTest", "App01UnitTest\App01UnitTest.csproj", "{D8CF90A3-6EBE-4B53-A8C1-D4BA4D406C3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App01UnitTest", "App01UnitTest\App01UnitTest.csproj", "{D8CF90A3-6EBE-4B53-A8C1-D4BA4D406C3B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
