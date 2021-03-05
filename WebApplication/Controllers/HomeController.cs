@@ -45,9 +45,16 @@ namespace WebApplication.Controllers
             
         }
 
-        
+        public IActionResult Bmi1(BMI calculator)
+        {
 
-    
+            return View();
+
+        }
+
+
+
+
 
         public IActionResult Privacy()
         {

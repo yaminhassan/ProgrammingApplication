@@ -1,0 +1,32 @@
+﻿@model ConsoleAppProject.App02.BMI
+@using ConsoleAppProject.App02
+@{
+    ViewData["Title"] = "Bmi1";
+}
+
+<div class="row">
+    <div class="row">
+        <h2> Result </h2>
+        <p class=" col-lg-6 " style="color:deeppink; display:none;" id="matricResult">
+
+            @Model.GetResultMatric()
+
+
+        </p>
+        <p class=" col-lg-6" style="color:deeppink; display:none;" id="imperialResult">
+
+            @Model.GetResultImperial()
+        </p>
+    </div>
+</div>
+<div>
+    <img src="~/Image/BMI_Chart.jpg" alt="an image " style="width:500px; height:500px" /><br />
+    <p style="color:blue">
+        <strong>
+            If you are Black, Asian or other minority ethnic group, you have a higher risk
+            Adult 23 or more are at increased risk Adult 27 or more are at high risk
+        </strong>
+      
+    </p>
+
+</div>

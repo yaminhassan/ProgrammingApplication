@@ -9,7 +9,7 @@
 
 <h1>  Body Mass Index Calculator</h1>
 
-<div class="col">
+<div class="container-fluid row">
 
     <div class="col-6">
         <div class="buttons ">
@@ -18,10 +18,14 @@
         </div>
         <form id="matric_form" class="form1" method="post" runat="server">
             <label for="height" class="mt-1 mb-1">Height Metres</label><br>
-            <input asp-for="HeightMetres" class="mt-2 mb-2" type="number" id="height" value="" min="0" placeholder="Centimetres" required><br>
+            <input asp-for="HeightMetres" class="mt-2 mb-2" type="number" id="height" value="" min="0" placeholder="Metres" required><br>
+            <label for="height" class="mt-1 mb-1"> Height in Centemetres</label><br />
+            <input asp-for="HeightCentemetre" class="mt-2 mb-2" type="number" id="height" value="" min="0" placeholder="Centemetres" required><br>
 
             <label for=" weight" class="mt-2 mb-2"> Weight KG</label><br>
-            <input asp-for="WeightKg" class="mt-2 mb-2" type="number" id="weight" value="" min="0" placeholder="Kilo grams" required><br>
+            <input asp-for="WeightKg" class="mt-2 mb-2" type="number" id="weight" value="" min="0" placeholder="Kilo grams" required><br />
+            <label for=" weight" class="mt-2 mb-2"> Weight Grams</label><br>
+            <input asp-for="WeightGrams" class="mt-2 mb-2" type="number" id="weight" value="" min="0" placeholder="Grams" required><br>
 
             <button class=" btn btn-success btn-sm" type="submit" id="submitM" value="submitMatric" runat="server">Submit</button>
 
@@ -30,9 +34,13 @@
         </form>
 
         <form id="imperial_form" style="display:none" runat="server" class="form2" method="post">
-            <label for="height" class="mt-1 mb-1">Height Inches</label><br>
+            <label for="height" class="mt-1 mb-1 ">Height Feet</label><br>
+            <input asp-for="HeightFeet" class="mt-2 mb-2" type="number" id="height" value="" min="0" placeholder="Feet" required><br>
+            <label for="height" class="mt-1 mb-1 ">Height Inches</label><br>
             <input asp-for="HeightInches" class="mt-2 mb-2" type="number" id="height" value="" min="0" placeholder="Inches" required><br>
 
+            <label for=" weight" class="mt-2 mb-2"> Weight stones</label><br>
+            <input asp-for="WeightStone" class="mt-2 mb-2" type="number" id="weight" value="" min="0" placeholder="Stones" required><br />
             <label for=" weight" class="mt-2 mb-2"> Weight lbs</label><br>
             <input asp-for="WeightLbs" class="mt-2 mb-2" type="number" id="weight" value="" min="0" placeholder="Lbs" required><br>
 
@@ -43,15 +51,25 @@
 
 
         <h2> Result </h2>
-        <p class=" col-lg-6 " style="color:deeppink; display:none;" id="matricResult"  >
+        <p class=" col-lg-6 " style="color:deeppink" id="matricResult"  >
 
             @Model.GetResultMatric()
               
 
         </p>
-        <p class=" col-lg-6" style="color:deeppink; display:none;" id="imperialResult">
+        <p class=" " style="color:deeppink " id="imperialResult">
 
             @Model.GetResultImperial()
+        </p>
+    </div>
+    <div class="col-6">
+        <img src="~/Image/BMI_Chart.jpg" alt="an image " style="width:400px; height:400px" /><br />
+        <p style="color:yellow">
+            <strong>
+                If you are Black, Asian or other minority ethnic group, you have a higher risk
+                Adult 23 or more are at increased risk Adult 27 or more are at high risk
+            </strong>
+
         </p>
     </div>
 
