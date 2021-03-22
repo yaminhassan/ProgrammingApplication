@@ -1,11 +1,11 @@
 # C# Console Applications App01 to App05
 | Author | Details |
 | ---- | ---- |
-**Name**: | Student Name  |
-**Student ID**: | 12345678 |
-**Course:** | Computing |
+**Name**: | Yamin Hassan  |
+**Student ID**: | 22013824 |
+**Course:** | Data Science |
 **Module**: | CO453     |
-**Started**: | January 2021 |    
+**Started**: | September 2020 |    
 
 1. App01: Distance Converter
 2. App02: BMI Calculator
