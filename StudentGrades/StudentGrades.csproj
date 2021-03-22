@@ -99,6 +99,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.2" />
+    <PackageReference Include="XAct.Diagrams.Uml.PlantUml" Version="1.1.17040.3290" />
   </ItemGroup>
 
   <ItemGroup>
