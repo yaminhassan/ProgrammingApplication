@@ -1,5 +1,6 @@
 ﻿using ConsoleAppProject.App02;
 using ConsoleAppProject.App01;
+using ConsoleAppProject.App03;
 using System;
 
 namespace ConsoleAppProject
@@ -14,7 +15,7 @@ namespace ConsoleAppProject
     /// </summary>
     public static class Program
     {
-        public static event EventHandler Event;
+        
 
         public static void Main(string[] args)
         {
@@ -23,8 +24,12 @@ namespace ConsoleAppProject
             Console.WriteLine("BNU CO453 Applications Programming 2020-2021!");
             Console.WriteLine();
             Console.Beep();
-            BMI bmi = new BMI();
-            bmi.Choice();
+            //BMI bmi = new BMI();
+            // bmi.Choice();
+            StudentGrade student = new StudentGrade();
+            student.MainMenu();
+           
+           
             
 
            //DistanceConverter convert = new DistanceConverter();

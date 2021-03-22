@@ -27,6 +27,35 @@ namespace ConsoleAppProject
              }
         
         }
+        public static int GetInput1()
+        {
+
+            try
+            {
+
+                int number = Convert.ToInt32(Console.ReadLine());
+                if (number > 0 && number < 100)
+                {
+
+                    return number;
+                }
+                else
+                {
+                    Console.WriteLine("Please Enter the Mark inbetween 0 and 100");
+                    return GetInput1();
+                }
+
+            }
+            catch (Exception)
+            {
+
+                Console.WriteLine("please type in a number");
+                return GetInput1();
+
+            }
+        }
+            
+       
         /// <summary>
         /// the Getinput method catch the exception if it can't handle
         /// </summary>
@@ -54,10 +83,10 @@ namespace ConsoleAppProject
         /// <param name="min"></param>
         /// <param name="max"></param>
         /// <returns></returns>
-        public static double GetInput(string message, double min, double max)
+        public static double GetInput(string message,double min, double max)
         {
 
-            double number = GetInput(message);
+            double number = GetInput();
             if(min <= number && number <= max)
             {
                 return number;
@@ -71,8 +100,8 @@ namespace ConsoleAppProject
         public static int SelectChoice(string message, string[] list)
         {
             Console.WriteLine(message);
-            DisplayChoices(list);
-            return (int)GetInput("Plese enter your choice number", 1, list.Length);
+            
+            return (int)GetInput("Please enter the Number",1, list.Length);
         }
         /// <summary>
         /// The Bmi result display the result according to the result

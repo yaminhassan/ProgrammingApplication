@@ -1,0 +1,140 @@
+﻿@model ConsoleAppProject.App02.BMI
+@using ConsoleAppProject.App02
+@{
+    ViewData["Title"] = "Bmi";
+}
+
+
+
+
+<h1>  Body Mass Index Calculator</h1>
+
+<div class="container-fluid row">
+
+    <div class="col-6">
+        <div class="buttons ">
+            <button class=" btn btn-success btn-sm" id="mode1" type="button" value="matric">Matric Units</button>
+            <button class=" btn btn-primary btn-sm" id="mode2" type="button" value="imperial">Imperial Units</button>
+        </div>
+        <form id="matric_form" class="form1" method="post" runat="server">
+            <label for="height" class="mt-1 mb-1">Height Metres</label><br>
+            <input asp-for="HeightMetres" class="mt-2 mb-2" type="number" id="height" value="" min="0" placeholder="Metres" required><br>
+            <label for="height" class="mt-1 mb-1"> Height in Centemetres</label><br />
+            <input asp-for="HeightCentemetre" class="mt-2 mb-2" type="number" id="height" value="" min="0" placeholder="Centemetres" required><br>
+
+            <label for=" weight" class="mt-2 mb-2"> Weight KG</label><br>
+            <input asp-for="WeightKg" class="mt-2 mb-2" type="number" id="weight" value="" min="0" placeholder="Kilo grams" required><br />
+            <label for=" weight" class="mt-2 mb-2"> Weight Grams</label><br>
+            <input asp-for="WeightGrams" class="mt-2 mb-2" type="number" id="weight" value="" min="0" placeholder="Grams" required><br>
+
+            <button class=" btn btn-success btn-sm" type="submit" id="submitM" value="submitMatric" runat="server">Submit</button>
+
+
+
+        </form>
+
+        <form id="imperial_form" style="display:none" runat="server" class="form2" method="post">
+            <label for="height" class="mt-1 mb-1 ">Height Feet</label><br>
+            <input asp-for="HeightFeet" class="mt-2 mb-2" type="number" id="height" value="" min="0" placeholder="Feet" required><br>
+            <label for="height" class="mt-1 mb-1 ">Height Inches</label><br>
+            <input asp-for="HeightInches" class="mt-2 mb-2" type="number" id="height" value="" min="0" placeholder="Inches" required><br>
+
+            <label for=" weight" class="mt-2 mb-2"> Weight stones</label><br>
+            <input asp-for="WeightStone" class="mt-2 mb-2" type="number" id="weight" value="" min="0" placeholder="Stones" required><br />
+            <label for=" weight" class="mt-2 mb-2"> Weight lbs</label><br>
+            <input asp-for="WeightLbs" class="mt-2 mb-2" type="number" id="weight" value="" min="0" placeholder="Lbs" required><br>
+
+            <button class=" btn btn-success btn-sm" type="submit" id="submitI" value="submitImperial"> Submit</button>
+
+
+        </form>
+
+
+        <h2> Result </h2>
+        <p class=" col-lg-6 " style="color:deeppink" id="matricResult">
+
+            @Model.GetResultMatric()
+
+
+        </p>
+        <p class=" " style="color:deeppink " id="imperialResult">
+
+            @Model.GetResultImperial()
+        </p>
+    </div>
+    <div class="col-6">
+        <img src="~/Images/BMI_Chart.jpg" alt="an image " style="width:400px; height:400px" /><br />
+        <p style="color:yellow">
+            <strong>
+                If you are Black, Asian or other minority ethnic group, you have a higher risk
+                Adult 23 or more are at increased risk Adult 27 or more are at high risk
+            </strong>
+
+        </p>
+    </div>
+
+
+</div>
+
+
+
+
+
+@section Scripts
+{
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="src/jquery.toggle-visibility.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#submitM").on('click', function () {
+                var value = $(this).val();
+                if (value == "submitMatric") {
+                    $("#matric_form").show();
+                    $("#matricResult").show();
+                    $("#imperialResult").hide();
+                    $("#imperial_form").hide();
+                }
+            });
+        });
+        $(document).ready(function () {
+            /*Getting the value of the checked radio buttons*/
+            $("#submitI").on('click', function () {
+                var value = $(this).val();
+                if (value == "submitImperial") {
+                    $("#matric_form").hide();
+                    $("#matricResult").hide();
+                    $("#imperialResult").show();
+                    $("#imperial_form").show();
+                }
+            });
+        });
+        $(document).ready(function () {
+            /*Getting the value of the checked radio buttons*/
+            $("#mode1").on('click', function () {
+                var value = $(this).val();
+                if (value == "matric") {
+                    $("#matric_form").show();
+                    $("#matricResult").show();
+                    $("#imperialResult").hide();
+                    $("#imperial_form").hide();
+                }
+            });
+        });
+        $(document).ready(function () {
+            /*Getting the value of the checked radio buttons*/
+            $("#mode2").on('click', function () {
+                var value = $(this).val();
+                if (value == "imperial") {
+                    $("#matric_form").hide();
+                    $("#matricResult").hide();
+                    $("#imperialResult").show();
+                    $("#imperial_form").show();
+                }
+            });
+        });
+    </script>
+}

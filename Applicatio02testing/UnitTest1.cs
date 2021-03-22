@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ConsoleAppProject.App02;
+using ConsoleAppProject.App03;
 
 namespace Applicatio02testing
 {
@@ -292,5 +293,6 @@ namespace Applicatio02testing
             double expectedresult11 = 42;
             Assert.AreEqual(expectedresult11, bmi.GetResultImperial());
         }
+        
         }
 }
