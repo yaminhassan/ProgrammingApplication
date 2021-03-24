@@ -1,26 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
-
-
 namespace ConsoleAppProject.App03
 {
+    /// <summary>
+    /// This is a Stuent class it is a blue print of the studnt it has  Id, Name , Mark and Grade 
+    /// of the student and also it can convert the given mark to grade.
+    /// </summary>
 	public class Student
-	{
-        public int Id { get; set; }
+    {
+        /// <summary>
+        /// Id of the student
+        /// </summary>
+        public int ID { get; set; }
+        /// <summary>
+        /// Name of the student
+        /// </summary>
         public string Name { get; set; }
+        /// <summary>
+        /// Mark of the student
+        /// </summary>
         public int Mark { get; set; }
-        public string Grade { get; set; }
-        public int Percentage { get; set; }
-
-
+        
+        /// <summary>
+        /// Grade of the student
+        /// </summary>
+        public string Grade { get; set; }      
+           /// <summary>
+           /// Constructor for web Application
+           /// </summary>
+        public Student( )
+        {
+            CalculateGrade(Mark);
+        }
+        /// <summary>
+        /// Constructor for the Student object 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="name"></param>
+        /// <param name="mark"></param>
         public Student(int id, string name, int mark)
         {
-            Id = id;
+            ID = id;
             Name = name;
             Mark = mark;
+            CalculateGrade(mark);
 
         }
-        public void CalculateGrade(int mark)
+        /// <summary>
+        /// The conversion method to convert the Mark to Grade.
+        /// </summary>
+        /// <param name="mark"></param>
+        /// <returns></returns>
+        public String CalculateGrade(int mark)
         {
             if (mark >= 70 && Mark <= 100)
             {
@@ -42,11 +73,15 @@ namespace ConsoleAppProject.App03
             {
                 Grade = "F";
             }
-
+            return Grade;
         }
+        /// <summary>
+        /// ToString Method to print the instance of the class
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
-            return "\tID: " + Id + " Name: " +Name + " Mark: " + Mark + " Grade:  " + Grade+ "\n\n";
+            return "\tID: " + ID + " Name: " +Name + " Mark: " + Mark + " Grade:  " + Grade + "\n\n";
         }
 
     }

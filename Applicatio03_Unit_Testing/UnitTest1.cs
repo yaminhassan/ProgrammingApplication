@@ -34,18 +34,13 @@ namespace Applicatio03_Unit_Testing
             
             Assert.AreEqual(1, student.Students.Count);
         }
-        [TestMethod]
-        public void MenuChoice()
-        {
-            Student s = new Student(55, "Yamin", 90);
-            student.AddObject(s);
-            ConsolHelper.GetInput().
+        
+        
             
 
 
 
-            Assert.AreEqual(, student.Students.Count);
-        }
+            
 
 
     }

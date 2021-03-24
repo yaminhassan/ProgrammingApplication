@@ -120,7 +120,7 @@ namespace ConsoleAppProject.App03
         {
             foreach(Student student in Students)
             {
-                if(student.Id == id)
+                if(student.ID == id)
                 {
                     return student;
                 }
@@ -130,7 +130,7 @@ namespace ConsoleAppProject.App03
         // The method to create the object    
         public void AddObject(Student student)
         {
-            if (FindStudentById(student.Id) != null)
+            if (FindStudentById(student.ID) != null)
             {
                 Console.WriteLine("\t\tPlease enter the unique id as This Id already exist");
 
@@ -156,7 +156,7 @@ namespace ConsoleAppProject.App03
                 int mark = ConsolHelper.GetInput1();
                 Student student = new Student(id, name, mark);
                 AddObject(student);
-                student.CalculateGrade(student.Mark);
+                
                 Console.WriteLine(student);
 
                 Console.WriteLine("Please enter yes for main menu or press any key to exit");
