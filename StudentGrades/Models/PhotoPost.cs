@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-namespace ConsoleAppProject.App04
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace StudentGrades
 {
     ///<summary>
     /// This class stores information about a Photo posts in a social network. 
@@ -11,10 +13,12 @@ namespace ConsoleAppProject.App04
     /// Yamin Hassan
     /// @version 0.1
     /// </author>
-    public class PhotoPost : Post
+    public class PhotoPost: Post
     {
         // the name of the image file
-        public String Filename { get; set; }        
+        [Column("File Name")]
+        public String Filename { get; set; }
+        [Column("Caption")]
         // a one line image caption
         public String Caption { get; set; }      
         
@@ -30,15 +34,11 @@ namespace ConsoleAppProject.App04
         /// <param name="filename">
         /// The filename of the image in this post.
         /// </param>
-        public PhotoPost(String author, String filename, String caption) : base(author)
+        public PhotoPost() 
         {           
-            this.Filename = filename;
-            this.Caption = caption;          
+               
         }
-        public PhotoPost(String author) : base(author)
-        {
-
-        }
+        
         public int ReturnImageId()
         {
             return ID;
@@ -51,12 +51,6 @@ namespace ConsoleAppProject.App04
             Console.WriteLine($"\tFilename: [{Filename}]");
             Console.WriteLine($"\tCaption: {Caption}");
             Console.WriteLine("__________________________________________________________________________");
-        }
-
-        public override string ToString()
-        {
-            return "\n\t ID: "+ ID +"\t Author Name: " + Username + "\n\t Caption: " + Caption +
-                   "\n\t Time" + Timestamp+ "\n\t Likes: " + Likes;
-        }
+        }        
     }
 }

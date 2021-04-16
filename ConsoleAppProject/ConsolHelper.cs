@@ -27,6 +27,16 @@ namespace ConsoleAppProject
              }
         
         }
+        public static void PrintHeader(string[] list)
+        {
+            int number = 1;
+            Console.WriteLine("\t\tThis is Social Media Application\n\t\t\t By Yamin Hassan");
+            foreach(string l in list )
+            {
+                Console.WriteLine($"\t {number++} : {l}");
+
+            }
+        }
         public static int GetInput1()
         {
 

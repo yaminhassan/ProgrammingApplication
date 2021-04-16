@@ -13,9 +13,11 @@ namespace StudentGrades
 {
     public class Program
     {
+
         public static void Main(string[] args)
 
         {
+            
             var host = CreateHostBuilder(args).Build();
 
             using (var scope = host.Services.CreateScope())
@@ -24,6 +26,7 @@ namespace StudentGrades
                 try
                 {
                     var context = services.GetRequiredService<StudentData>();
+                    
                     DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)
@@ -32,6 +35,7 @@ namespace StudentGrades
                     logger.LogError(ex, "An error occurred while seeding the database.");
                 }
             }
+
 
             host.Run();
         }

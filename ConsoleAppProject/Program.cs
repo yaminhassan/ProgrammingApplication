@@ -1,6 +1,7 @@
 ﻿using ConsoleAppProject.App02;
 using ConsoleAppProject.App01;
 using ConsoleAppProject.App03;
+using ConsoleAppProject.App04;
 using System;
 
 namespace ConsoleAppProject
@@ -26,10 +27,11 @@ namespace ConsoleAppProject
             Console.Beep();
             //BMI bmi = new BMI();
             // bmi.Choice();
-            StudentGrade student = new StudentGrade();
-            student.MainMenu();
-           
-           
+            //StudentGrade student = new StudentGrade();
+            //student.MainMenu();
+
+            NetworkApplication network = new NetworkApplication();
+            network.DisplayMenu();
             
 
            //DistanceConverter convert = new DistanceConverter();
