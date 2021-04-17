@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ConsoleAppProject.App04.Post">
+    <Position X="4.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAIABoAAAAQACAQAAAAAAAAACAAAgAgABIAA=</HashCode>
+      <FileName>App04\Post.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleAppProject.App04.PhotoPost">
+    <Position X="8" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAQAAEAAAAAQAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>App04\PhotoPost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleAppProject.App04.NewsFeed">
+    <Position X="2.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAEAIAACCAAAAQAAAYCAAAAAAQAhAAEBAgAAAAE=</HashCode>
+      <FileName>App04\NewsFeed.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleAppProject.App04.NetworkApplication">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EEAAAAAIAAAAAEACAAAAAIAAAAAACBQAAAMAQgAAAAE=</HashCode>
+      <FileName>App04\NetworkApplication.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleAppProject.App04.MessagePost">
+    <Position X="6.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAQAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>App04\MessagePost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
