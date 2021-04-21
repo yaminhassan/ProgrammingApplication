@@ -27,7 +27,7 @@ namespace StudentGrades
                 {
                     var context = services.GetRequiredService<StudentData>();
                     
-                    DbInitializer.Initialize(context);
+                    //DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)
                 {
@@ -48,7 +48,7 @@ namespace StudentGrades
                 try
                 {
                     var context = services.GetRequiredService<StudentData>();
-                    DbInitializer.Initialize(context);
+                    //DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)
                 {

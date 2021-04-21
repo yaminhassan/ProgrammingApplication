@@ -16,11 +16,11 @@ namespace StudentGrades
     public class PhotoPost: Post
     {
         // the name of the image file
-        [Column("File Name")]
-        public String Filename { get; set; }
-        [Column("Caption")]
+       
+        public string Filename { get; set; }
+        
         // a one line image caption
-        public String Caption { get; set; }      
+        public string Caption { get; set; }      
         
         ///<summary>
         /// Constructor for objects of class PhotoPost.
@@ -37,20 +37,6 @@ namespace StudentGrades
         public PhotoPost() 
         {           
                
-        }
-        
-        public int ReturnImageId()
-        {
-            return ID;
-        }
-        public override void Display()
-        {
-            Console.WriteLine("________________________________________________________________________");
-            base.Display();
-            Console.WriteLine();
-            Console.WriteLine($"\tFilename: [{Filename}]");
-            Console.WriteLine($"\tCaption: {Caption}");
-            Console.WriteLine("__________________________________________________________________________");
         }        
     }
 }

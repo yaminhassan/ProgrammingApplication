@@ -1,0 +1,107 @@
+﻿@model IEnumerable<StudentGrades.Post>
+
+
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>All Posts</h1>
+
+<p>
+    <div class="col">
+        <a class="btn-danger" asp-area="" asp-controller="MessagePosts" asp-action="Create">Post Message</a>
+        <a class="btn-light" asp-area="" asp-controller="PhotoPosts" asp-action="Create">Post Photo</a>
+    </div>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                PostId
+            </th>
+            <th>
+                Author
+            </th>
+            <th>
+                Likes
+            </th>
+            <th>
+                Comments
+            </th>
+            <th>
+                TimeStamp
+            </th>
+            <th>
+                Message
+            </th>
+            <th>
+                Caption
+            </th>
+            <th>
+                File Name
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            MessagePost message = new MessagePost();
+            PhotoPost photo = new PhotoPost();
+            if(item is MessagePost)
+            {
+                message = (MessagePost)item;
+            }
+            if (item is PhotoPost)
+            {
+                photo = (PhotoPost)item;
+            }
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Likes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comments)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Timestamp)
+            </td>
+
+            <td>
+                @if(message != null)
+                {
+                <span>@message.Message</span>
+                }
+                else
+                {
+                <span>Null</span>
+                }
+            </td>
+            
+            <td>
+                @if(photo != null)
+                {
+                <span>@photo.Filename</span>
+                }
+                else
+                {
+                <span>Null</span>
+                }
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

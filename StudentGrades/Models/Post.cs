@@ -15,6 +15,8 @@ namespace StudentGrades
     /// Michael Kölling and David J. Barnes
     /// version 0.1
     /// </author>
+    /// 
+    [Serializable]
     public class Post
     {
         
@@ -24,7 +26,7 @@ namespace StudentGrades
         // ID of the post
         public int ID { get; set; }
         // username of the post's author
-       
+       [StringLength(20), Required]
         public String Username { get; set; }
         // Date and time of the Post
         public DateTime Timestamp { get; }

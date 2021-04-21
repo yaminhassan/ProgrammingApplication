@@ -16,18 +16,13 @@ namespace StudentGrades
     public class MessagePost: Post
     {
        
-        public String Message { get; }
+        public String Message { get; set; }
        
         public MessagePost()
         {
 
         }
-        public override string ToString()
-        {
-            return "ID:" + ID + "\n\t User Name:" + Username + "\n\t Time" + Timestamp + "\n\t Likes" + Likes +
-                   "\n\t Comments:" + Comments;
-
-        }
+        
     }
 
 
